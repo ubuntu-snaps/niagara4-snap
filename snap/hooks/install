@@ -1,0 +1,9 @@
+#!/bin/sh -e
+mkdir -p $SNAP_COMMON/etc/niagara
+mkdir -p $SNAP_COMMON/security/licenses
+mkdir -p $SNAP_COMMON/modules
+mkdir -p $SNAP_COMMON/Niagara4.7/tridium
+mkdir -p $SNAP_COMMON/Niagara4.7/vykon
+
+chown 5011:5011 -R $SNAP_COMMON
+chown 5011:5011 -R $SNAP_DATA

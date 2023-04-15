@@ -1,0 +1,67 @@
+name: niagara4
+version: '4.7'
+summary: Niagara Framework
+description: Niagara IoT Framework
+
+grade: devel
+confinement: devmode
+base: core18
+
+architectures:
+  - build-on: amd64
+
+system-usernames:
+  snap_daemon: shared
+
+apps:
+  niagarad:
+    command: bin/niagarad-wrapper
+    daemon: forking
+    environment:
+      LD_LIBRARY_PATH: $SNAP/bin
+      HOME: $SNAP_COMMON
+
+parts:
+  jre:
+    plugin: dump
+    source: http://nfile.iotapp.site/4.7/oracle-jre-linux-x64-es.dist
+    source-type: zip
+    organize:
+      '*': jre/
+  deps:
+    plugin: nil
+    stage-packages:
+      - setpriv
+  core:
+    plugin: dump
+    source: http://nfile.iotapp.site/4.7/nre-core-linux-x64.dist
+    source-type: zip
+    stage:
+      - -bin/ext/jxbrowser    
+      - '*'
+    organize:
+      '*': bin/
+  config:
+    plugin: dump
+    source: http://nfile.iotapp.site/4.7/nre-config-linux-x64.dist
+    source-type: zip
+    stage:
+      - -*.sh
+      - -INSTALL
+      - -README
+      - -META-INF
+      - -etc/m2
+      - -etc/sources
+      - -etc/gradle
+      - '*'
+  overlay:
+    plugin: dump
+    source: overlay
+
+layout:
+  /etc/niagara:
+    bind: $SNAP_COMMON/etc/niagara
+  $SNAP/security/licenses:
+    bind: $SNAP_COMMON/security/licenses
+  $SNAP/modules:
+    bind: $SNAP_COMMON/modules

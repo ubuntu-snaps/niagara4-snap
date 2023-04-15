@@ -1,0 +1,3 @@
+#!/bin/sh -e
+
+setpriv --reuid 5011 --regid 5011 --keep-groups -- niagarad
