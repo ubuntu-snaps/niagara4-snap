@@ -3,9 +3,9 @@ version: '4.7'
 summary: Niagara Framework
 description: Niagara IoT Framework
 
+base: core22
 grade: devel
 confinement: devmode
-base: core18
 
 architectures:
   - build-on: amd64
@@ -20,6 +20,7 @@ apps:
     environment:
       LD_LIBRARY_PATH: $SNAP/bin
       HOME: $SNAP_COMMON
+    plugs: [network, network-bind]
 
 parts:
   jre:
@@ -31,7 +32,7 @@ parts:
   deps:
     plugin: nil
     stage-packages:
-      - setpriv
+      - util-linux
   core:
     plugin: dump
     source: http://nfile.iotapp.site/4.7/nre-core-linux-x64.dist
