@@ -7,8 +7,8 @@ base: core24
 grade: devel
 confinement: devmode
 
-architectures:
-  - build-on: amd64
+platforms:
+  amd64:
 
 system-usernames:
   snap_daemon: shared
