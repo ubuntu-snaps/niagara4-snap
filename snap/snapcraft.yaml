@@ -1,9 +1,9 @@
 name: niagara4
-version: '4.7'
+version: "4.13.3.48"
 summary: Niagara Framework
 description: Niagara IoT Framework
 
-base: core22
+base: core24
 grade: devel
 confinement: devmode
 
@@ -25,26 +25,26 @@ apps:
 parts:
   jre:
     plugin: dump
-    source: http://nfile.iotapp.site/4.7/oracle-jre-linux-x64-es.dist
+    source: http://pubfs.iotapp.site/n4installer/4.13.3.48/dist/azul-jre-linux-amd64.dist
     source-type: zip
     organize:
-      '*': jre/
+      "*": jre/
   deps:
     plugin: nil
     stage-packages:
       - util-linux
   core:
     plugin: dump
-    source: http://nfile.iotapp.site/4.7/nre-core-linux-x64.dist
+    source: http://pubfs.iotapp.site/n4installer/4.13.3.48/dist/nre-core-linux-x64.dist
     source-type: zip
     stage:
-      - -bin/ext/jxbrowser    
-      - '*'
+      - -bin/ext/jxbrowser
+      - "*"
     organize:
-      '*': bin/
+      "*": bin/
   config:
     plugin: dump
-    source: http://nfile.iotapp.site/4.7/nre-config-linux-x64.dist
+    source: http://pubfs.iotapp.site/n4installer/4.13.3.48/dist/nre-config-linux-x64.dist
     source-type: zip
     stage:
       - -*.sh
@@ -54,7 +54,7 @@ parts:
       - -etc/m2
       - -etc/sources
       - -etc/gradle
-      - '*'
+      - "*"
   overlay:
     plugin: dump
     source: overlay
