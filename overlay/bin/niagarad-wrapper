@@ -1,7 +1,3 @@
 #!/bin/sh -e
-
-echo LD_LIBRARY_PATH=$LD_LIBRARY_PATH
-echo HOME=$HOME
-whoami
-
+env
 setpriv --reuid 5011 --regid 5011 --keep-groups -- $SNAP/bin/niagarad "$@"
