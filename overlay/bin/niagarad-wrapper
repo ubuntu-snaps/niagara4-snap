@@ -1,3 +1,8 @@
 #!/bin/sh -e
 env
-setpriv --reuid 5011 --regid 5011 --keep-groups -- $SNAP/bin/niagarad "$@"
+ARGS=""
+if [ "$(snapctl get niagarad.trace)" == "true" ]; then
+	ARGS="$ARGS /trace"
+fi
+echo ARGS=$ARGS
+setpriv --reuid 5011 --regid 5011 --keep-groups -- $SNAP/bin/niagarad $ARGS "$@"

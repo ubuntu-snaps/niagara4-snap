@@ -12,8 +12,8 @@ platforms:
 
 apps:
   niagarad:
-    command: bin/niagarad-wrapper /console
-    daemon: simple
+    command: bin/niagarad-wrapper
+    daemon: forking
     environment:
       LD_LIBRARY_PATH: $SNAP/bin
       HOME: $SNAP_COMMON
