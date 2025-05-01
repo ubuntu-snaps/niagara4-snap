@@ -5,4 +5,4 @@ if [ "$(snapctl get niagarad.trace)" = "true" ]; then
 	ARGS="$ARGS /trace"
 fi
 echo ARGS=$ARGS
-setpriv --reuid 5011 --regid 5011 --keep-groups -- $SNAP/bin/niagarad $ARGS "$@"
+sleep infinity | setpriv --reuid 5011 --regid 5011 --keep-groups -- $SNAP/bin/niagarad $ARGS "$@"
