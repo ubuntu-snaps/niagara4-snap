@@ -1,6 +1,6 @@
 #!/bin/bash -e
 env
-ARGS=""
+ARGS="/console"
 if [ "$(snapctl get niagarad.trace)" = "true" ]; then
 	ARGS="$ARGS /trace"
 fi
