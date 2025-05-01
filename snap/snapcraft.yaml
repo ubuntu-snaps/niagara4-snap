@@ -1,7 +1,7 @@
 name: niagara4
-version: "4.13.3.48"
 summary: Niagara Framework
 description: Niagara IoT Framework
+version: "4.13.3.48"
 
 base: core24
 grade: devel
@@ -10,13 +10,9 @@ confinement: devmode
 platforms:
   amd64:
 
-system-usernames:
-  snap_daemon: shared
-
 apps:
   niagarad:
-    command: bin/niagarad-wrapper
-    daemon: forking
+    command: bin/niagarad
     environment:
       LD_LIBRARY_PATH: $SNAP/bin
       HOME: $SNAP_COMMON
