@@ -12,7 +12,7 @@ platforms:
 
 apps:
   niagarad:
-    command: bin/niagarad-wrapper
+    command: bin/niagarad-wrapper /console
     daemon: simple
     environment:
       LD_LIBRARY_PATH: $SNAP/bin
