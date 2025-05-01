@@ -33,11 +33,15 @@ parts:
     plugin: dump
     source: http://pubfs.iotapp.site/n4installer/4.13.3.48/dist/nre-core-linux-x64.dist
     source-type: zip
+    organize:
+      "*": bin/
     stage:
       - -bin/ext/jxbrowser
       - "*"
-    organize:
-      "*": bin/
+    override-stage: |
+      snapcraftctl stage
+      chmod +x bin/*
+
   config:
     plugin: dump
     source: http://pubfs.iotapp.site/n4installer/4.13.3.48/dist/nre-config-linux-x64.dist
