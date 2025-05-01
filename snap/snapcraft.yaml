@@ -48,14 +48,10 @@ parts:
     source: http://pubfs.iotapp.site/n4installer/4.13.3.48/dist/nre-config-linux-x64.dist
     source-type: zip
     stage:
-      - -*.sh
-      - -INSTALL
-      - -README
-      - -META-INF
-      - -etc/m2
-      - -etc/sources
-      - -etc/gradle
-      - "*"
+      - defaults
+      - etc
+      - security
+
   overlay:
     plugin: dump
     source: overlay
