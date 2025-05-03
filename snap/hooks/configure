@@ -1,5 +1,9 @@
 #!/bin/bash -e
 
+if [ -z "$(snapctl get nre-debug)" ]; then
+	snapctl set nre-debug=0;
+fi
+
 if [ -z "$(snapctl get niagarad.trace)" ]; then
 	snapctl set niagarad.trace=false;
 fi
