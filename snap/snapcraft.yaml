@@ -38,10 +38,17 @@ parts:
       "*": bin/
     stage:
       - -bin/ext/jxbrowser
+      - -bin/nsupport
       - "*"
     override-stage: |
       snapcraftctl stage
       chmod +x bin/*
+
+  nsupport:
+    plugin: make
+    source: nsupport
+    organize:
+      nsupport: bin/
 
   config:
     plugin: dump
