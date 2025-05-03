@@ -1,11 +1,11 @@
 #!/bin/bash -e
-nre_debug=$(snapctl get nre-debug)
-if [ $nre_debug -gt 0 ]; then
+debug=$(snapctl get debug)
+if [ $debug -gt 0 ]; then
 	export nre_debug
 fi
 env
 ARGS="/console"
-if [ "$(snapctl get niagarad.trace)" = "true" ]; then
+if [ $debug -gt 0 ]; then
 	ARGS="$ARGS /trace"
 fi
 echo ARGS=$ARGS

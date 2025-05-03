@@ -8,5 +8,4 @@ chown 5011:5011 -R $SNAP_COMMON
 chown 5011:5011 -R $SNAP_DATA
 
 snapctl set \
-	nre-debug=0 \
-	niagarad.trace=false
+	debug=0
