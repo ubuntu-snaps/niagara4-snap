@@ -64,6 +64,8 @@ parts:
     source: overlay
 
 layout:
+  /etc/niagara:
+    bind: $SNAP_COMMON/sysroot/etc/niagara
   $SNAP/etc:
     bind: $SNAP_COMMON/etc
   $SNAP/security/licenses:
