@@ -39,6 +39,8 @@ parts:
     stage:
       - -bin/ext/jxbrowser
       - -bin/nsupport
+      - -bin/libdsfspi.so
+      - -bin/ext/nre.jar
       - "*"
     override-stage: |
       snapcraftctl stage
