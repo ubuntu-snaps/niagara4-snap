@@ -8,6 +8,7 @@ mkdir -p $SNAP_COMMON/Niagara4.13/vykon/daemon
 
 cp $SNAP/defaults/daemon.properties $SNAP_COMMON/Niagara4.13/tridium/daemon/
 cp $SNAP/defaults/daemon.properties $SNAP_COMMON/Niagara4.13/vykon/daemon
+cp $SNAP/modules/*.jar $SNAP_COMMON/modules/
 
 chown 5011:5011 -R $SNAP_COMMON
 chown 5011:5011 -R $SNAP_DATA
