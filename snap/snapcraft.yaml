@@ -2,6 +2,7 @@ name: niagara4
 summary: Niagara Framework
 description: Niagara IoT Framework
 version: "4.13.3.48"
+adopt-info: overlay
 
 base: core24
 grade: devel
@@ -64,6 +65,9 @@ parts:
   overlay:
     plugin: dump
     source: overlay
+    override-stage: |
+      craftctl default
+      craftctl set version="$(craftctl get version)-$(git rev-parse --short HEAD)"
 
 layout:
   /etc/niagara:
