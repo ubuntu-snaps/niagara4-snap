@@ -2,5 +2,6 @@
 
 int main()
 {
-    printf("$6$FrCq/42a8BrSsWZK$AaADRWbn1juLjjVtd3F6VSRApky8y32UTesGpfmOzXfWQ3.Z5rOHmgTPkr737PpbWAg0aLffAFEuFbUN6bGlo.\n");
+    // openssl passwd -6 niagara
+    printf("$6$fb.f6HnbFIvnFXmM$qInhNG4VBkDmQewNQ7HDblHo74sp8dAT6u4sEIYGDLZKyp7Sz4u4vXt.eBY1WT5ZhLVV41zRch.xfff6Dg5Uh/\n");
 }
