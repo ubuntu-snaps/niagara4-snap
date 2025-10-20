@@ -27,6 +27,9 @@ parts:
     source-type: zip
     organize:
       "*": jre/
+    override-stage: |
+      snapcraftctl stage
+      mv jre/lib/ext jre/lib/ext-bundled
   deps:
     plugin: nil
     stage-packages:

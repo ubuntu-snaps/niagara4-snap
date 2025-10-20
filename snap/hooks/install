@@ -9,7 +9,7 @@ mkdir -p $SNAP_COMMON/Niagara4.13/vykon/daemon
 
 cp $SNAP/defaults/daemon.properties $SNAP_COMMON/Niagara4.13/tridium/daemon/
 cp $SNAP/defaults/daemon.properties $SNAP_COMMON/Niagara4.13/vykon/daemon
-cp $SNAP/jre/lib/ext/*.jar $SNAP_COMMON/jre/lib/ext/
+cp $SNAP/jre/lib/ext-bundled/*.jar $SNAP_COMMON/jre/lib/ext/
 cp $SNAP/modules-bundled/*.jar $SNAP_COMMON/modules/
 
 echo Admin12345 > $SNAP_COMMON/sysroot/etc/niagara/.sp
