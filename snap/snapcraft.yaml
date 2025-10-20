@@ -26,7 +26,6 @@ parts:
     source: http://pubfs.iotapp.site/n4installer/4.13.3.48/dist/azul-jre-linux-amd64.dist
     source-type: zip
     organize:
-      "lib/ext/*": jre/lib/ext-bundled/
       "*": jre/
   deps:
     plugin: nil
