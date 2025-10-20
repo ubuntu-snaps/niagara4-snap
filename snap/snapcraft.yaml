@@ -27,8 +27,8 @@ parts:
     source-type: zip
     organize:
       "*": jre/
-    override-stage: |
-      snapcraftctl stage
+    override-build: |
+      craftctl default
       mv jre/lib/ext jre/lib/ext-bundled
   deps:
     plugin: nil
@@ -47,7 +47,7 @@ parts:
       - -bin/ext/nre.jar
       - "*"
     override-stage: |
-      snapcraftctl stage
+      craftctl default
       chmod +x bin/*
 
   nsupport:
