@@ -1,6 +1,7 @@
 #!/bin/bash -e
 mkdir -p $SNAP_COMMON/sysroot/etc/niagara
 mkdir -p $SNAP_COMMON/etc
+mkdir -p $SNAP_COMMON/security/certificates
 mkdir -p $SNAP_COMMON/security/licenses
 mkdir -p $SNAP_COMMON/jre/lib/ext
 mkdir -p $SNAP_COMMON/modules

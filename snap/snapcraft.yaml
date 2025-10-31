@@ -77,6 +77,8 @@ layout:
     bind: $SNAP_COMMON/sysroot/etc/niagara
   $SNAP/etc:
     bind: $SNAP_COMMON/etc
+  $SNAP/security/certificates:
+    bind: $SNAP_COMMON/security/certificates
   $SNAP/security/licenses:
     bind: $SNAP_COMMON/security/licenses
   $SNAP/modules:
