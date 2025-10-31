@@ -16,7 +16,7 @@ apps:
     command: bin/niagarad-wrapper
     daemon: simple
     environment:
-      LD_LIBRARY_PATH: $SNAP/bin
+      LD_LIBRARY_PATH: $SNAP/bin:$SNAP_COMMON/lib:$SNAP_COMMON/Niagara4.13/tridium/shared
       HOME: $SNAP_COMMON
     plugs: [network, network-bind]
 
